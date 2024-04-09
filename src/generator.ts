@@ -27,7 +27,6 @@ export function createRandomGraph(n: number, maxWeight: number = n): Graph {
     graph.addEdge(nodeKey, nodeKey2, weight);
     console.log(`[INFO] added edge ${nodeKey}<->${nodeKey2} to graph with weight of ${weight}`);
   }
-
   return graph;
 }
 

@@ -8,10 +8,37 @@
   </head>
   <body>
     <div id="app">
-      <h1>Dijktra's Algorithm</h1>
-      <div id="graph"></div>
-      <div class="canvas-container">
-        <canvas id="canvas"></canvas>
+      <div class="col-1">
+        <h1>Dijktra's Algorithm</h1>
+        <form id="config">
+          <div class="inputs">
+            <div class="row">
+              <div class="container">
+                <input id="nodes_amount" type="number" max="50" min="2" placeholder="5"/>
+                <label for="nodes_amount">Number of nodes</label>
+              </div>
+              <div class="container">
+                <input id="max_weight" type="number" max="100" min="1" placeholder="10"/>
+                <label for="max_weight">Max weight</label>
+              </div>
+            </div>
+            <div class="container">
+              <!-- <label for="start_node">Start node</label> -->
+              <select id="start_node" placeholder="start node"></select>
+            </div>
+            <div class="container">
+              <!-- <label for="end_node">End node</label> -->
+              <select id="end_node"></select>
+            </div>
+          </div>
+          <button id="start_simulation" class="primary" type="submit">Start simulation</button>
+        </form>
+        <div id="graph"></div>
+      </div>
+      <div class="col-2">
+        <div class="canvas-container">
+          <canvas id="canvas"></canvas>
+        </div>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
